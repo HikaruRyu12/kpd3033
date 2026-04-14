@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Maklumat pelajar</title>
+</head>
+<body>
+<div id="kad" style="order: 2px solid #333; padding: 20px; width: 250px; border-radius: 10px; background-color: #f9f9f9;">
+	<h1>Maklumat Pelajar</h1>
+	<div id="kandungan">
+		<p>Klik butang dibawah untuk melihat profile</p>
+	</div>
+</div>
+<br>
+<button id="btn">CLICK</button>
+<script>
+	let maklumat ={
+		Nama:"Akmal Haziq",
+		Umur:17,
+		Kelas:"2SVM IPD",
+		Skill:"HTML,JAVA,PHP,CSS,JAVASCRIPT,MYSQL"
+	};
+
+	const butang=document.getElementById("btn");
+	const kandungan=document.getElementById("kandungan");
+
+	butang.addEventListener("click",function() {
+		let info =`
+			<p><strong>Nama:</strong> ${maklumat.Nama}</p>
+			<p><strong>Umur:</strong> ${maklumat.Umur} Tahun</p>
+			<p><strong>Skill:</strong> ${maklumat.Skill}</p>
+			<p><strong>Kelas:</strong> ${maklumat.Kelas}</p>
+		`;
+
+		kandungan.innerHTML= info;
+		butang.style.backgroundColor="green";
+		butang.innerHTML="maklumat berjaya dipapar";
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>setInterval</title>
+</head>
+<body>
+	<h2 id="jam">00:00:00</h2>
+
+	<script>
+		function updateJam(){
+			let masaSekarang= new Date();
+			let jam=masaSekarang.getHours();
+			let minit=masaSekarang.getMinutes();
+			let saat=masaSekarang.getSeconds();
+
+			document.getElementById('jam').innerHTML = jam+":"+minit+":"+saat;
+		}
+
+		setInterval(updateJam,1000);
+	</script>
+
+</body>
+</html>

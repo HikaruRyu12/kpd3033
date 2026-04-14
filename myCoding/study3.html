@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>latihan3</title>
+</head>
+<body>
+	<h1>Kelayakkan ujian memandu</h1>
+<input type="number" id="umur" placeholder="Masukkan umur">
+<button onclick="Check()">Check kelayakkan</button>
+<p id="semak"></p>
+
+<script>
+	function Check() {
+		let umur=document.getElementById('umur').value;
+		let semak=document.getElementById('semak');
+
+		if(umur >= 18){
+			semak.innerHTML="ANDA LAYAK MENDAPAT LESEN";
+			semak.style.color="green";
+		}else{
+			semak.innerHTML="ANDA TIDAK LAYAK MENDAPAT LESEN";
+			semak.style.color="RED";
+		}
+	}
+</script>
+</body>
+</html>

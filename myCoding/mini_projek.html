@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Mini project</title>
+</head>
+<body>
+<input type="text" id="inputbarang" placeholder="Tambah tugasan">
+<button onclick="TambahTugasan()">Tambah</button>
+
+
+<ul id="senaraiVisual"></ul>
+<script>
+	let tugasan=[];
+
+	function TambahTugasan(){
+		let input=document.getElementById('inputbarang');
+		let senaraiUl=document.getElementById('senaraiVisual');
+
+		if(input.value !==""){
+
+			tugasan.push(input.value);
+			senaraiUl.innerHTML="";
+
+			for (let i =0; i < tugasan.length;i++) {
+				senaraiUl.innerHTML+="<li>"+ tugasan[i] +"</li>";
+				senaraiUl.style.color="blue";
+
+				input.value="";
+			}
+
+		}
+
+	}
+</script>
+</body>
+</html>

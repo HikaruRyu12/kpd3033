@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>event listener</title>
+</head>
+<body>
+<button id="btnMain">Lalu mouse sini</button>
+<p id="status">tunggu arahan</p>
+
+<script>
+	const butang=document.getElementById('btnMain');
+	const teks=document.getElementById('status');
+
+	butang.addEventListener("mouseover", function(){
+		teks.innerHTML="Ada orang";
+		teks.style.color="red";
+	});
+
+	butang.addEventListener("mouseout", function(){
+		teks.innerHTML="dah pergi";
+		teks.style.color="green";
+	})
+
+</script>
+</body>
+</html>
